@@ -30,7 +30,7 @@ function BookDescription(){
                     <h1>{singleBook.title}</h1>
                     
                     <p>Authors: {singleBook.authors?singleBook.authors.join(" ,  "):null}</p>
-                    <p>Year: {singleBook.publishedDate}</p>
+                    <p>Year: {new Date(singleBook.publishedDate).getFullYear()}</p>
                     <h3>Description</h3>
                     <p>{singleBook.longDescription}</p>
                 </div>

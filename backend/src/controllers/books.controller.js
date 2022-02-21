@@ -70,4 +70,21 @@ router.get("/catagory/:id", async (req,res)=>{
 
 })
 
+router.get("/before-year/:id", async (req,res)=>{
+    try{
+        let page = +req.query.page || 1;
+        let limit = +req.query.size || 20;
+        let skip = (page-1)*limit;
+        let books = await Book.find({publishedDate:{$lt: req.params.id}}).skip(skip).limit(limit).lean().exec();
+        let allbooks=await Book.find({publishedDate:{$lt: req.params.id}}).lean().exec();
+        
+        return res.json({books:books, totalbooks:allbooks.length});
+
+    }catch(e){
+        return res.status(400).json({status: "failed", message: e.message });
+    }
+    
+
+})
+
 module.exports = router;

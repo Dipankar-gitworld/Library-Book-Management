@@ -12,11 +12,11 @@ function Filterbar(props) {
                     <div >sort by publish year</div>
                     <div className="innerSortingDiv" style={sortingFlag ? { display: "block" } : { display: "none" }}>
                         <br />
-                        <p style={{ cursor: "pointer" }}>before 2000</p>
-                        <p style={{ cursor: "pointer" }}>before 2005</p>
-                        <p style={{ cursor: "pointer" }}>before 2010</p>
-                        <p style={{ cursor: "pointer" }}>before 2015</p>
-                        <p style={{ cursor: "pointer" }}>before 2020</p>
+                        <p style={{ cursor: "pointer" }} onClick={()=>{window.location.href = "/book/before-year/2000"}}>before 2000</p>
+                        <p style={{ cursor: "pointer" }} onClick={()=>{window.location.href = "/book/before-year/2005"}}>before 2005</p>
+                        <p style={{ cursor: "pointer" }} onClick={()=>{window.location.href = "/book/before-year/2010"}}>before 2010</p>
+                        <p style={{ cursor: "pointer" }} onClick={()=>{window.location.href = "/book/before-year/2015"}}>before 2015</p>
+                        <p style={{ cursor: "pointer" }} onClick={()=>{window.location.href = "/book/before-year/2020"}}>before 2020</p>
                     </div>
 
                 </div>
