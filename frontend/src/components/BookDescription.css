@@ -1,0 +1,19 @@
+.bookDescription-div{
+    display: flex;
+    height: 597px;
+    background-color: #E4E4E4;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #044343;
+}
+.bookDescription-div > div:nth-child(1){
+    display: flex;
+    flex-basis: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.bookDescription-div > div:nth-child(2){
+    flex-basis: 70%;
+    overflow: auto;
+    padding-right: 50px;
+}
